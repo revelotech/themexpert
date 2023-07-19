@@ -7,5 +7,5 @@ class DarkModeButtonTheme extends AppTheme {
   );
 
   Color get buttonColor =>
-      darkMode ? Color.fromARGB(255, 28, 45, 90) : Colors.blue;
+      darkMode ? const Color.fromARGB(255, 28, 45, 90) : Colors.blue;
 }
