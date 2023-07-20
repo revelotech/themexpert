@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_themex/src/base_theme.dart';
 import 'package:flutter_themex/src/widgets/theme_configuration.dart';
 
-/// [ThemeX] is an inherited widget used to hold the [BaseTheme] info for the
+/// [ThemeX] is an inherited widget used to hold the theme info for the
 /// descendants of this tree. Prefer using the [ThemeWrapper] widget, otherwise
 /// it will be necessary to use both the [ThemeX] widget and a [Builder] in
 /// order to apply the desired theme to the right context.
