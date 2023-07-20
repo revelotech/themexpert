@@ -76,7 +76,7 @@ Flutter ThemeX is a highly customizable theme solution for Flutter apps, designe
 5. Using use your themes' tokens:
 
     1. If your token is an override of an AppTheme attribute, you can use `ThemeX.ofType<AppTheme>(context)` to access it.
-    2. If your token is unique and not available in your general AppTheme, use `ThemeX.ofType<YourSpecificTheme>(context)` to be to access them.
+    2. If your token is unique and not available in your general AppTheme, use `ThemeX.ofType<YourSpecificTheme>(context)` to access them.
 
     The example below shows both use cases, 1. on the Container's color attribute and 2. on the Text's style attribute:
 
