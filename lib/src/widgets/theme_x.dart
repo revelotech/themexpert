@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_themex/src/base_theme.dart';
-import 'package:flutter_themex/src/widgets/theme_configuration.dart';
+import 'package:flutter_themex/src/widgets/theme_x_configuration.dart';
 
 /// [ThemeX] is an inherited widget used to hold the theme info for the
 /// descendants of this tree. Prefer using the [ThemeWrapper] widget, otherwise
 /// it will be necessary to use both the [ThemeX] widget and a [Builder] in
 /// order to apply the desired theme to the right context.
 ///
-/// There must be a [ThemeConfiguration] ancestor in order to use this widget.
+/// There must be a [ThemeXConfiguration] ancestor in order to use this widget.
 class ThemeX extends InheritedWidget {
   /// This field is the theme you want applied to your widget tree.
   final BaseTheme theme;

@@ -40,14 +40,14 @@ Flutter ThemeX is a highly customized theme solution for Flutter apps to make it
         ```dart
             @override
             Widget build(BuildContext context) {
-                return ThemeConfiguration(
+                return ThemeXConfiguration(
                     darkMode: isDarkMode,
                     builder: (context) => ThemeWrapper(
                         theme: AppTheme(context),
                         builder: (context) => MaterialApp(
             // ...
         ```
-    3. To toggle dark mode, you should update ThemeConfiguration's darkMode property. This will update all the themes in your app with the new dark mode configuration. There is a quick example on how to do that in the example app.
+    3. To toggle dark mode, you should update ThemeXConfiguration's darkMode property. This will update all the themes in your app with the new dark mode configuration. There is a quick example on how to do that in the example app.
 
 6. When creating new themes, always extend them from your main AppTheme.
 

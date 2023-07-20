@@ -7,7 +7,7 @@ import 'package:flutter_themex/flutter_themex.dart';
 /// create other themes that extends this app theme created and override specific attributes or even
 /// create new ones if necessary.
 ///
-/// There must be a [ThemeConfiguration] ancestor in order to fetch the darkMode.
+/// There must be a [ThemeXConfiguration] ancestor in order to fetch the darkMode.
 abstract class BaseTheme {
   /// Context where this theme is being used.
   final BuildContext context;
@@ -17,7 +17,7 @@ abstract class BaseTheme {
     this.context,
   );
 
-  /// This is a convenience method to fetch the [ThemeConfiguration] darkMode
+  /// This is a convenience method to fetch the [ThemeXConfiguration] darkMode
   /// property.
-  bool get darkMode => ThemeConfiguration.of(context).darkMode;
+  bool get darkMode => ThemeXConfiguration.of(context).darkMode;
 }

@@ -6,6 +6,6 @@
 // https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
 
 export 'src/base_theme.dart';
-export 'src/widgets/theme_configuration.dart';
+export 'src/widgets/theme_x_configuration.dart';
 export 'src/widgets/theme_wrapper.dart';
 export 'src/widgets/theme_x.dart';
