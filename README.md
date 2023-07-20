@@ -36,13 +36,13 @@ Flutter ThemeX is a highly customized theme solution for Flutter apps to make it
 4. [optional] Add Dark Mode support to your app.
 
     1. Add support to dark mode by adding Theme Configuration to the root of your app (before MaterialApp).
-    2. After that, make sure to wrap your MaterialApp in a ThemeWrapper with you AppTheme. The beginning of your widget tree should look like this:
+    2. After that, make sure to wrap your MaterialApp in a ThemeXWrapper with you AppTheme. The beginning of your widget tree should look like this:
         ```dart
             @override
             Widget build(BuildContext context) {
                 return ThemeXConfiguration(
                     darkMode: isDarkMode,
-                    builder: (context) => ThemeWrapper(
+                    builder: (context) => ThemeXWrapper(
                         theme: AppTheme(context),
                         builder: (context) => MaterialApp(
             // ...

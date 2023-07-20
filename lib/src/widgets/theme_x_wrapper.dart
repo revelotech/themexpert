@@ -10,7 +10,7 @@ import 'package:flutter_themex/src/widgets/theme_x.dart';
 ///
 /// In order to access the theming variables, simply call
 /// [ThemeX].ofType<YourThemeType>(context) and access the theme's variables.
-class ThemeWrapper extends StatelessWidget {
+class ThemeXWrapper extends StatelessWidget {
   /// The theme to be used in the tree, it should extend BaseTheme.
   final BaseTheme theme;
 
@@ -19,7 +19,7 @@ class ThemeWrapper extends StatelessWidget {
 
   /// ThemeWrapper is a convenience widget to build a tree of widgets with the
   /// right [BuildContext] that is able to fetch the closest theme settings.
-  const ThemeWrapper({
+  const ThemeXWrapper({
     required this.theme,
     required this.builder,
     super.key,
