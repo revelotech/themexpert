@@ -101,7 +101,7 @@ Flutter ThemeX is a highly customizable theme solution for Flutter apps, designe
 
     > **Note**: Notice that you need to apply the `SpecificWidgetTheme` before using it with `ThemeX.ofType<SpecificWidgetTheme>(context)`.
 
-5. [optional] Add a standalone method as a top-level function to make it easy to access your theme's tokens. We reccomend creating it in your AppTheme class' file.
+6. [optional] Add a standalone method as a top-level function to make it easy to access your theme's tokens. We reccomend creating it in your AppTheme class' file.
     ```dart
     AppTheme themeOf(BuildContext context) {
       return ThemeX.ofType<AppTheme>(context);
@@ -122,7 +122,7 @@ Flutter ThemeX is a highly customizable theme solution for Flutter apps, designe
         );
     ```
 
-6. [optional] Add Dark Mode support to your app.
+7. [optional] Add Dark Mode support to your app.
 
     1. Add ThemeXConfiguration to the root of your app or before the first occurrence of ThemeXWrapper. If you choose to use MaterialApp, the beginning of your widget tree would look like this:
         ```dart
@@ -136,8 +136,3 @@ Flutter ThemeX is a highly customizable theme solution for Flutter apps, designe
             // ...
         ```
     2. To toggle dark mode, you should update ThemeXConfiguration's darkMode property. This will update all the themes in your app with the new dark mode configuration. There is a quick example on how to do that in the example app.
-
-7. When creating new themes, we recommend always extending them from your main AppTheme.
-
-    1. If your theme has unique tokens, not available in your general AppTheme, use ThemeX.ofType<YourSpecificTheme>(context) to be able to access them. See the example app on how to do that.
-    2. If your theme only overrides tokens from AppTheme, you can use themeOf(context) to access them.
