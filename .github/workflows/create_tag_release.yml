@@ -1,0 +1,28 @@
+name: 2. Create tag and release
+
+on:
+  workflow_dispatch:
+jobs:
+  create_tag:
+    runs-on: ubuntu-latest
+    steps:
+      - if: github.ref != 'refs/heads/main'
+        name: Check valid branch
+        run: |
+          echo "Branch must be 'main' to run this workflow"
+          exit 1
+      - uses: actions/checkout@v3
+      - name: Set up Ruby 3.1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler-cache: true
+      - name: Fastlane create tag and release on git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GLOBAL_GITHUB_ACCESS_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.GLOBAL_GITHUB_ACCESS_TOKEN }}
+          USER_NAME_GITHUB: ${{ secrets.USER_NAME_GITHUB }}
+          USER_EMAIL_GITHUB: ${{ secrets.USER_EMAIL_GITHUB }}
+          GITHUB_REPOSITORY: ${{ env.GITHUB_REPOSITORY }}
+        run: |
+          bundle exec fastlane create_tag_and_release_on_git
