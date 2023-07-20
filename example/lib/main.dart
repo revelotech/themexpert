@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_themex/flutter_themex.dart';
 import 'package:flutter_themex_example/theme/app_theme.dart';
-import 'package:flutter_themex_example/theme/dark_mode_button_theme.dart';
+import 'package:flutter_themex_example/theme/custom_button_theme.dart';
 import 'package:flutter_themex_example/theme/secondary_theme.dart';
 import 'package:flutter_themex_example/theme/specific_widget_theme.dart';
 
@@ -104,7 +104,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                   Expanded(
                     child: ThemeXWrapper(
-                      theme: DarkModeButtonTheme(context),
+                      theme: CustomButtonTheme(context),
                       builder: (context) {
                         return Container(
                           padding: const EdgeInsets.symmetric(
@@ -113,7 +113,7 @@ class _MyAppState extends State<MyApp> {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  ThemeX.ofType<DarkModeButtonTheme>(context)
+                                  ThemeX.ofType<CustomButtonTheme>(context)
                                       .buttonColor,
                             ),
                             child: Text(

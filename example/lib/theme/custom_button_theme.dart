@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_themex_example/theme/app_theme.dart';
 
-class DarkModeButtonTheme extends AppTheme {
-  const DarkModeButtonTheme(
+class CustomButtonTheme extends AppTheme {
+  const CustomButtonTheme(
     super.context,
   );
 
