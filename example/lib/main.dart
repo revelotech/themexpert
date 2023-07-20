@@ -77,10 +77,11 @@ class _MyAppState extends State<MyApp> {
                         width: double.maxFinite,
                         color: themeOf(context).primaryColor,
                         child: Center(
-                            child: Text(
-                          'Secondary Theme',
-                          style: themeOf(context).txBody,
-                        )),
+                          child: Text(
+                            'Secondary Theme',
+                            style: themeOf(context).txBody,
+                          ),
+                        ),
                       ),
                     ),
                   ),

@@ -12,9 +12,7 @@ class ThemeX extends InheritedWidget {
   /// This field is the theme you want applied to your widget tree.
   final BaseTheme theme;
 
-  /// Constructor - Prefer using the [ThemeWrapper] widget. otherwise it will be
-  /// necessary to use both the [ThemeX] widget and a [Builder] in order to get
-  /// the right context.
+  /// Constructor
   const ThemeX({
     required this.theme,
     required super.child,
@@ -26,7 +24,7 @@ class ThemeX extends InheritedWidget {
     return oldWidget.theme != theme;
   }
 
-  /// This is a the method that should be used to fetch the theme properties
+  /// This is the method that should be used to fetch the theme properties
   /// of the desired context. It will throw an error if the theme is not found
   /// in the widget tree.
   static T ofType<T extends BaseTheme>(BuildContext context) {
