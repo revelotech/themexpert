@@ -2,13 +2,13 @@
 
 [![pub package](https://img.shields.io/pub/v/flutter_themex?style=plastic&logo=flutter)](https://pub.dev/packages/flutter_themex)
 
-![Flutter ThemeX Logo](https://raw.githubusercontent.com/revelojobs/flutter_themex/main/doc/static/ThemeX_Symbol96.png)
+![Flutter ThemeX Logo](https://raw.githubusercontent.com/revelotech/flutter_themex/main/doc/static/ThemeX_Symbol96.png)
 
 Flutter ThemeX is a highly customizable theme solution for Flutter apps, designed to make it easy to apply multiple themes in your app and to change your app's visual identity when needed.
 
 ## Why should you use ThemeX?
 
-![Working form gif](https://raw.githubusercontent.com/revelojobs/flutter_themex/main/doc/static/ThemeX_example.gif)
+![Working form gif](https://raw.githubusercontent.com/revelotech/flutter_themex/main/doc/static/ThemeX_example.gif)
 
 - Easily support dark mode in your app.
 - Fetch your main design tokens with ease.
