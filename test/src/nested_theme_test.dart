@@ -17,16 +17,8 @@ class NestedTheme extends AppTheme {
   Color get primaryColor => darkMode ? Colors.green : Colors.yellow;
 }
 
-enum TokenType { overridden, exclusive }
-
 void main() {
-  Color getColor(BuildContext context, TokenType tokenType) {
-    return tokenType == TokenType.overridden
-        ? ThemeX.ofType<AppTheme>(context).surfaceColor
-        : ThemeX.ofType<NestedTheme>(context).primaryColor;
-  }
-
-  Widget buildBoilerPlate({required TokenType tokenType}) {
+  Widget buildBoilerPlate({required WidgetBuilder nestedThemeWithToken}) {
     return ThemeXConfiguration(
       darkMode: false,
       builder: (context) => ThemeXWrapper(
@@ -34,15 +26,7 @@ void main() {
         builder: (context) => MaterialApp(
           home: Scaffold(
             backgroundColor: ThemeX.ofType<AppTheme>(context).surfaceColor,
-            body: ThemeXWrapper(
-              theme: NestedTheme(context),
-              builder: (context) {
-                return Container(
-                  height: 10,
-                  color: getColor(context, tokenType),
-                );
-              },
-            ),
+            body: nestedThemeWithToken(context),
           ),
         ),
       ),
@@ -53,8 +37,19 @@ void main() {
     group('and it is a nested theme with overridden tokens', () {
       testWidgets('then it should not affect widgets above it in the tree',
           (tester) async {
-        await tester
-            .pumpWidget(buildBoilerPlate(tokenType: TokenType.overridden));
+        await tester.pumpWidget(
+          buildBoilerPlate(
+            nestedThemeWithToken: (context) => ThemeXWrapper(
+              theme: NestedTheme(context),
+              builder: (context) {
+                return Container(
+                  height: 10,
+                  color: ThemeX.ofType<NestedTheme>(context).surfaceColor,
+                );
+              },
+            ),
+          ),
+        );
 
         final scaffoldFinder = find.byType(Scaffold);
         expect(scaffoldFinder, findsOneWidget);
@@ -66,8 +61,19 @@ void main() {
 
       testWidgets('then it should get the correct token from nested theme',
           (tester) async {
-        await tester
-            .pumpWidget(buildBoilerPlate(tokenType: TokenType.overridden));
+        await tester.pumpWidget(
+          buildBoilerPlate(
+            nestedThemeWithToken: (context) => ThemeXWrapper(
+              theme: NestedTheme(context),
+              builder: (context) {
+                return Container(
+                  height: 10,
+                  color: ThemeX.ofType<NestedTheme>(context).surfaceColor,
+                );
+              },
+            ),
+          ),
+        );
 
         final scaffoldFinder = find.byType(Scaffold);
         expect(scaffoldFinder, findsOneWidget);
@@ -88,7 +94,19 @@ void main() {
     testWidgets(
         'and it is a nested theme with exclusive token then it should get the correct token from nested theme',
         (tester) async {
-      await tester.pumpWidget(buildBoilerPlate(tokenType: TokenType.exclusive));
+      await tester.pumpWidget(
+        buildBoilerPlate(
+          nestedThemeWithToken: (context) => ThemeXWrapper(
+            theme: NestedTheme(context),
+            builder: (context) {
+              return Container(
+                height: 10,
+                color: ThemeX.ofType<NestedTheme>(context).primaryColor,
+              );
+            },
+          ),
+        ),
+      );
 
       final scaffoldFinder = find.byType(Scaffold);
       expect(scaffoldFinder, findsOneWidget);
