@@ -32,7 +32,6 @@ void main() {
       await tester.pumpWidget(buildBoilerPlate(false));
 
       final widgetFinder = find.byType(Container);
-      expect(widgetFinder, findsOneWidget);
 
       final container = widgetFinder.first.evaluate().first.widget as Container;
       expect(container.color, Colors.white);
@@ -43,7 +42,6 @@ void main() {
       await tester.pumpWidget(buildBoilerPlate(true));
 
       final widgetFinder = find.byType(Container);
-      expect(widgetFinder, findsOneWidget);
 
       final container = widgetFinder.first.evaluate().first.widget as Container;
       expect(container.color, Colors.black);

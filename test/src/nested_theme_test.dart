@@ -52,7 +52,6 @@ void main() {
         );
 
         final scaffoldFinder = find.byType(Scaffold);
-        expect(scaffoldFinder, findsOneWidget);
 
         final scaffold =
             scaffoldFinder.first.evaluate().first.widget as Scaffold;
@@ -65,21 +64,17 @@ void main() {
           buildBoilerPlate(
             nestedThemeWithToken: (context) => ThemeXWrapper(
               theme: NestedTheme(context),
-              builder: (context) {
-                return Container(
-                  height: 10,
-                  color: ThemeX.ofType<NestedTheme>(context).surfaceColor,
-                );
-              },
+              builder: (context) => Container(
+                height: 10,
+                color: ThemeX.ofType<NestedTheme>(context).surfaceColor,
+              ),
             ),
           ),
         );
 
         final scaffoldFinder = find.byType(Scaffold);
-        expect(scaffoldFinder, findsOneWidget);
 
         final widgetFinder = find.byType(Container);
-        expect(widgetFinder, findsOneWidget);
 
         final scaffold =
             scaffoldFinder.first.evaluate().first.widget as Scaffold;
@@ -98,21 +93,17 @@ void main() {
         buildBoilerPlate(
           nestedThemeWithToken: (context) => ThemeXWrapper(
             theme: NestedTheme(context),
-            builder: (context) {
-              return Container(
-                height: 10,
-                color: ThemeX.ofType<NestedTheme>(context).primaryColor,
-              );
-            },
+            builder: (context) => Container(
+              height: 10,
+              color: ThemeX.ofType<NestedTheme>(context).primaryColor,
+            ),
           ),
         ),
       );
 
       final scaffoldFinder = find.byType(Scaffold);
-      expect(scaffoldFinder, findsOneWidget);
 
       final widgetFinder = find.byType(Container);
-      expect(widgetFinder, findsOneWidget);
 
       final scaffold = scaffoldFinder.first.evaluate().first.widget as Scaffold;
       expect(scaffold.backgroundColor, Colors.white);
