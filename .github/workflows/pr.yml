@@ -31,3 +31,5 @@ jobs:
         run: flutter analyze
       - name: "[Lib] Linter"
         run: flutter analyze
+      - name: "[Lib] Test"
+        run: flutter test
