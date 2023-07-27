@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_themex/flutter_themex.dart';
 import 'package:flutter_themex_example/theme/app_theme.dart';
-import 'package:flutter_themex_example/theme/custom_button_theme.dart';
-import 'package:flutter_themex_example/theme/secondary_theme.dart';
-import 'package:flutter_themex_example/theme/specific_widget_theme.dart';
+import 'package:flutter_themex_example/theme/accent_theme.dart';
+import 'package:flutter_themex_example/theme/dark_mode_component_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +27,7 @@ class _MyAppState extends State<MyApp> {
       builder: (context) => ThemeXWrapper(
         theme: AppTheme(context),
         builder: (context) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           home: Scaffold(
             backgroundColor: themeOf(context).surfaceColor,
             appBar: AppBar(
@@ -56,78 +56,213 @@ class _MyAppState extends State<MyApp> {
             ),
             body: SafeArea(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.all(12),
-                      width: double.maxFinite,
-                      color: themeOf(context).primaryColor,
-                      child: Center(
-                          child: Text(
-                        'App Theme',
-                        style: themeOf(context).txBody,
-                      )),
+                  Container(
+                    margin: const EdgeInsets.only(
+                      left: 24,
+                      right: 24,
+                      top: 40,
+                      bottom: 12,
                     ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 4,
+                      vertical: 1,
+                    ),
+                    color: themeOf(context).badgeColor,
+                    child: Text(
+                      'APPTHEME',
+                      style: themeOf(context).txBodySmaller,
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(
+                      left: 24,
+                      right: 24,
+                      top: 12,
+                      bottom: 12,
+                    ),
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'This is the app ',
+                            style: themeOf(context).txBodyBig,
+                          ),
+                          TextSpan(
+                            text: 'main theme',
+                            style: themeOf(context).txBodyBig.copyWith(
+                                  fontWeight: FontWeight.w900,
+                                ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.only(
+                      left: 24,
+                      right: 24,
+                      top: 12,
+                      bottom: 12,
+                    ),
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'All the ',
+                            style: themeOf(context).txBodySmall,
+                          ),
+                          TextSpan(
+                            text: 'tokens',
+                            style: themeOf(context).txBodySmall.copyWith(
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 1,
+                                  decoration: TextDecoration.underline,
+                                  color: themeOf(context).linkColor,
+                                ),
+                          ),
+                          TextSpan(
+                            text: ' and ',
+                            style: themeOf(context).txBodySmall,
+                          ),
+                          TextSpan(
+                            text: 'cool things',
+                            style: themeOf(context).txBodySmall.copyWith(
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 1,
+                                  decoration: TextDecoration.underline,
+                                  color: themeOf(context).linkColor,
+                                ),
+                          ),
+                          TextSpan(
+                            text:
+                                ' that your app needs are configured here. Also'
+                                ', I need to write a few more words so the '
+                                'description feels a little less lorem-ipsum-'
+                                'ish',
+                            style: themeOf(context).txBodySmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  ThemeXWrapper(
+                    theme: AccentTheme(context),
+                    builder: (context) {
+                      return Container(
+                        margin: const EdgeInsets.only(
+                          left: 24,
+                          right: 24,
+                          top: 12,
+                          bottom: 12,
+                        ),
+                        padding: const EdgeInsets.all(24),
+                        color: themeOf(context).surfaceColor,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 4,
+                                vertical: 1,
+                              ),
+                              color: themeOf(context).badgeColor,
+                              child: Text(
+                                'APPTHEME',
+                                style: themeOf(context).txBodySmaller,
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(
+                                top: 12,
+                                bottom: 12,
+                              ),
+                              child: RichText(
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'This is the Accent Theme. ',
+                                      style: themeOf(context)
+                                          .txBodySmall
+                                          .copyWith(
+                                              fontWeight: FontWeight.w800),
+                                    ),
+                                    TextSpan(
+                                      text:
+                                          'It will always maintain it\'s color hierarchy, although some color might need to be tweaked.',
+                                      style: themeOf(context).txBodySmall,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.only(
+                                top: 12,
+                                bottom: 12,
+                              ),
+                              child: Text(
+                                'Read more',
+                                style: themeOf(context).txBodySmall.copyWith(
+                                      fontWeight: FontWeight.w600,
+                                      decoration: TextDecoration.underline,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                   ),
                   Expanded(
                     child: ThemeXWrapper(
-                      theme: SecondaryTheme(context),
-                      builder: (context) => Container(
-                        margin: const EdgeInsets.all(12),
-                        width: double.maxFinite,
-                        color: themeOf(context).primaryColor,
-                        child: Center(
-                          child: Text(
-                            'Secondary Theme',
-                            style: themeOf(context).txBody,
+                      theme: DarkModeComponentTheme(context),
+                      builder: (context) => Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          margin: const EdgeInsets.all(12),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(200),
+                            color: themeOf(context).surfaceColor,
+                            boxShadow: [
+                              BoxShadow(
+                                color: themeOf(context).shadowColor,
+                                blurRadius: 12,
+                                offset: const Offset(0, 2),
+                              ),
+                            ],
+                          ),
+                          clipBehavior: Clip.hardEdge,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Switch(
+                                activeColor:
+                                    themeOf(context).highlightTextColor,
+                                value: isDarkMode,
+                                onChanged: (value) {
+                                  setState(() {
+                                    isDarkMode = value;
+                                  });
+                                },
+                              ),
+                              const SizedBox(
+                                width: 12,
+                              ),
+                              Text(
+                                'Toggle Dark Mode',
+                                style: themeOf(context)
+                                    .txBody
+                                    .copyWith(fontSize: 16),
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                  Expanded(
-                    child: ThemeXWrapper(
-                      theme: SpecificWidgetTheme(context),
-                      builder: (context) => Container(
-                        margin: const EdgeInsets.all(12),
-                        width: double.maxFinite,
-                        color: themeOf(context).primaryColor,
-                        child: Center(
-                            child: Text(
-                          'Specific widget Theme',
-                          style: ThemeX.ofType<SpecificWidgetTheme>(context)
-                              .txTitle,
-                          textAlign: TextAlign.center,
-                        )),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: ThemeXWrapper(
-                      theme: CustomButtonTheme(context),
-                      builder: (context) {
-                        return Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 24),
-                          width: double.maxFinite,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  ThemeX.ofType<CustomButtonTheme>(context)
-                                      .buttonColor,
-                            ),
-                            child: Text(
-                              'Dark Mode: $darkModeState',
-                              style: themeOf(context).txBody,
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                isDarkMode = !isDarkMode;
-                              });
-                            },
-                          ),
-                        );
-                      },
                     ),
                   ),
                 ],
