@@ -7,5 +7,5 @@ class DarkModeComponentTheme extends AppTheme {
   );
 
   @override
-  Color get surfaceColor => darkMode ? Color(0xFF0C152C) : Color(0xFFF7F8F9);
+  Color get surfaceColor => darkMode ? const Color(0xFF0C152C) : const Color(0xFFF7F8F9);
 }
