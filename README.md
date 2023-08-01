@@ -8,7 +8,7 @@ Flutter ThemeX is a highly customizable theme solution for Flutter apps, designe
 
 ## Why should you use ThemeX?
 
-![Working form gif](https://raw.githubusercontent.com/revelotech/flutter_themex/main/doc/static/ThemeX_example.gif)
+<img src="https://raw.githubusercontent.com/revelotech/flutter_themex/main/doc/static/ThemeX_example.gif" width="25%" alt="Working ThemeX gif"/>
 
 - Easily support dark mode in your app.
 - Fetch your main design tokens with ease.
