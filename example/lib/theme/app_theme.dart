@@ -24,7 +24,8 @@ class AppTheme extends BaseTheme {
   Color get highlightTextColor =>
       darkMode ? const Color(0xFFF7F8F9) : const Color(0xFF3A506B);
 
-  Color get linkColor => darkMode ? const Color(0xFF9CDAE7) : const Color(0xFF3A7C92);
+  Color get linkColor =>
+      darkMode ? const Color(0xFF9CDAE7) : const Color(0xFF3A7C92);
 
   Color get poweredByReveloTextColor => darkMode
       ? const Color(0xFF5AC2D7)

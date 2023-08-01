@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_themex/flutter_themex.dart';
 import 'package:flutter_themex_example/theme/app_theme.dart';
 import 'package:flutter_themex_example/theme/accent_theme.dart';
-import 'package:flutter_themex_example/theme/dark_mode_component_theme.dart';
+import 'package:flutter_themex_example/theme/switch_component_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,169 +55,146 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             body: SafeArea(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(
-                      left: 24,
-                      right: 24,
-                      top: 40,
-                      bottom: 12,
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 4,
-                      vertical: 1,
-                    ),
-                    color: themeOf(context).badgeColor,
-                    child: Text(
-                      'APPTHEME',
-                      style: themeOf(context).txBodySmaller,
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.only(
-                      left: 24,
-                      right: 24,
-                      top: 12,
-                      bottom: 12,
-                    ),
-                    child: RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'This is the app ',
-                            style: themeOf(context).txBodyBig,
+              child: CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(
+                            left: 24,
+                            right: 24,
+                            top: 40,
+                            bottom: 12,
                           ),
-                          TextSpan(
-                            text: 'main theme',
-                            style: themeOf(context).txBodyBig.copyWith(
-                                  fontWeight: FontWeight.w900,
-                                ),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 4,
+                            vertical: 1,
                           ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.only(
-                      left: 24,
-                      right: 24,
-                      top: 12,
-                      bottom: 12,
-                    ),
-                    child: RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'All the ',
-                            style: themeOf(context).txBodySmall,
+                          color: themeOf(context).badgeColor,
+                          child: Text(
+                            'APP THEME',
+                            style: themeOf(context).txBodySmaller,
                           ),
-                          TextSpan(
-                            text: 'tokens',
-                            style: themeOf(context).txBodySmall.copyWith(
-                                  fontWeight: FontWeight.w700,
-                                  letterSpacing: 1,
-                                  decoration: TextDecoration.underline,
-                                  color: themeOf(context).linkColor,
-                                ),
-                          ),
-                          TextSpan(
-                            text: ' and ',
-                            style: themeOf(context).txBodySmall,
-                          ),
-                          TextSpan(
-                            text: 'cool things',
-                            style: themeOf(context).txBodySmall.copyWith(
-                                  fontWeight: FontWeight.w700,
-                                  letterSpacing: 1,
-                                  decoration: TextDecoration.underline,
-                                  color: themeOf(context).linkColor,
-                                ),
-                          ),
-                          TextSpan(
-                            text:
-                                ' that your app needs are configured here. Also'
-                                ', I need to write a few more words so the '
-                                'description feels a little less lorem-ipsum-'
-                                'ish',
-                            style: themeOf(context).txBodySmall,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  ThemeXWrapper(
-                    theme: AccentTheme(context),
-                    builder: (context) {
-                      return Container(
-                        margin: const EdgeInsets.only(
-                          left: 24,
-                          right: 24,
-                          top: 12,
-                          bottom: 12,
                         ),
-                        padding: const EdgeInsets.all(24),
-                        color: themeOf(context).surfaceColor,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 4,
-                                vertical: 1,
-                              ),
-                              color: themeOf(context).badgeColor,
-                              child: Text(
-                                'APPTHEME',
-                                style: themeOf(context).txBodySmaller,
-                              ),
+                        Container(
+                          padding: const EdgeInsets.only(
+                            left: 24,
+                            right: 24,
+                            top: 12,
+                            bottom: 12,
+                          ),
+                          child: RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'This is the app ',
+                                  style: themeOf(context).txBodyBig,
+                                ),
+                                TextSpan(
+                                  text: 'main theme',
+                                  style: themeOf(context).txBodyBig.copyWith(
+                                        fontWeight: FontWeight.w900,
+                                      ),
+                                ),
+                              ],
                             ),
-                            Container(
-                              padding: const EdgeInsets.only(
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(
+                            left: 24,
+                            right: 24,
+                            top: 12,
+                            bottom: 12,
+                          ),
+                          child: Text(
+                            'All the tokens and cool things that your '
+                            'app needs are configured here. Also, I need '
+                            'to write a few more words so the description '
+                            'feels a little less lorem-ipsum-ish',
+                            style: themeOf(context).txBodySmall,
+                          ),
+                        ),
+                        ThemeXWrapper(
+                          theme: AccentTheme(context),
+                          builder: (context) {
+                            return Container(
+                              margin: const EdgeInsets.only(
+                                left: 24,
+                                right: 24,
                                 top: 12,
                                 bottom: 12,
                               ),
-                              child: RichText(
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: 'This is the Accent Theme. ',
-                                      style: themeOf(context)
-                                          .txBodySmall
-                                          .copyWith(
-                                              fontWeight: FontWeight.w800),
+                              padding: const EdgeInsets.all(24),
+                              color: themeOf(context).surfaceColor,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 4,
+                                      vertical: 1,
                                     ),
-                                    TextSpan(
-                                      text:
-                                          'It will always maintain it\'s color hierarchy, although some color might need to be tweaked.',
-                                      style: themeOf(context).txBodySmall,
+                                    color: themeOf(context).badgeColor,
+                                    child: Text(
+                                      'ACCENT THEME',
+                                      style: themeOf(context).txBodySmaller,
                                     ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: const EdgeInsets.only(
-                                top: 12,
-                                bottom: 12,
-                              ),
-                              child: Text(
-                                'Read more',
-                                style: themeOf(context).txBodySmall.copyWith(
-                                      fontWeight: FontWeight.w600,
-                                      decoration: TextDecoration.underline,
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.only(
+                                      top: 12,
+                                      bottom: 12,
                                     ),
+                                    child: RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'This is the Accent Theme. ',
+                                            style: themeOf(context)
+                                                .txBodySmall
+                                                .copyWith(
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                          ),
+                                          TextSpan(
+                                            text:
+                                                'It will always maintain it\'s color hierarchy, although some color might need to be tweaked.',
+                                            style: themeOf(context).txBodySmall,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.only(
+                                      top: 12,
+                                      bottom: 12,
+                                    ),
+                                    child: Text(
+                                      'Read more',
+                                      style:
+                                          themeOf(context).txBodySmall.copyWith(
+                                                fontWeight: FontWeight.w600,
+                                                decoration:
+                                                    TextDecoration.underline,
+                                              ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                          ],
+                            );
+                          },
                         ),
-                      );
-                    },
+                      ],
+                    ),
                   ),
-                  Expanded(
+                  SliverFillRemaining(
+                    hasScrollBody: false,
                     child: ThemeXWrapper(
-                      theme: DarkModeComponentTheme(context),
+                      theme: SwitchComponentTheme(context),
                       builder: (context) => Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(
@@ -226,15 +203,16 @@ class _MyAppState extends State<MyApp> {
                             horizontal: 20,
                           ),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(200),
+                            borderRadius:
+                                ThemeX.ofType<SwitchComponentTheme>(context)
+                                    .borderRadius,
                             color: themeOf(context).surfaceColor,
-                            boxShadow: [
-                              BoxShadow(
-                                color: themeOf(context).shadowColor,
-                                blurRadius: 12,
-                                offset: const Offset(0, 2),
-                              ),
-                            ],
+                            boxShadow: themeOf(context).darkMode
+                                ? null
+                                : [
+                                    ThemeX.ofType<SwitchComponentTheme>(context)
+                                        .shadow
+                                  ],
                           ),
                           clipBehavior: Clip.hardEdge,
                           child: Row(
@@ -255,16 +233,16 @@ class _MyAppState extends State<MyApp> {
                               ),
                               Text(
                                 'Toggle Dark Mode',
-                                style: themeOf(context)
-                                    .txBody
-                                    .copyWith(fontSize: 16),
+                                style:
+                                    ThemeX.ofType<SwitchComponentTheme>(context)
+                                        .txSwitch,
                               ),
                             ],
                           ),
                         ),
                       ),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
