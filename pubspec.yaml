@@ -1,6 +1,6 @@
 name: flutter_themex
 description: Flutter ThemeX is a highly customizable theme solution for Flutter apps, designed to make it easy to apply multiple themes in your app and to change your app's visual identity when needed.
-version: 0.0.1
+version: 1.0.0
 homepage: https://github.com/revelotech/flutter_themex
 repository: https://github.com/revelotech/flutter_themex
 issue_tracker: https://github.com/revelotech/flutter_themex/issues
