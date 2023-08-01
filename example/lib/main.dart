@@ -18,8 +18,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool isDarkMode = false;
 
-  String get darkModeState => isDarkMode ? 'ON' : 'OFF';
-
   @override
   Widget build(BuildContext context) {
     return ThemeXConfiguration(
@@ -44,11 +42,8 @@ class _MyAppState extends State<MyApp> {
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: Text(
-                      'Powered by Revelo',
-                      style: TextStyle(
-                        color: themeOf(context).poweredByReveloTextColor,
-                        fontSize: 13,
-                      ),
+                      'POWERED BY REVELO',
+                      style: themeOf(context).txBodySmaller,
                     ),
                   ),
                 ),
@@ -114,7 +109,7 @@ class _MyAppState extends State<MyApp> {
                             'app needs are configured here. Also, I need '
                             'to write a few more words so the description '
                             'feels a little less lorem-ipsum-ish',
-                            style: themeOf(context).txBodySmall,
+                            style: themeOf(context).txBody,
                           ),
                         ),
                         ThemeXWrapper(
@@ -154,7 +149,7 @@ class _MyAppState extends State<MyApp> {
                                           TextSpan(
                                             text: 'This is the Accent Theme. ',
                                             style: themeOf(context)
-                                                .txBodySmall
+                                                .txBody
                                                 .copyWith(
                                                     fontWeight:
                                                         FontWeight.w800),
@@ -162,7 +157,7 @@ class _MyAppState extends State<MyApp> {
                                           TextSpan(
                                             text:
                                                 'It will always maintain it\'s color hierarchy, although some color might need to be tweaked.',
-                                            style: themeOf(context).txBodySmall,
+                                            style: themeOf(context).txBody,
                                           ),
                                         ],
                                       ),
@@ -175,12 +170,11 @@ class _MyAppState extends State<MyApp> {
                                     ),
                                     child: Text(
                                       'Read more',
-                                      style:
-                                          themeOf(context).txBodySmall.copyWith(
-                                                fontWeight: FontWeight.w600,
-                                                decoration:
-                                                    TextDecoration.underline,
-                                              ),
+                                      style: themeOf(context).txBody.copyWith(
+                                            fontWeight: FontWeight.w600,
+                                            decoration:
+                                                TextDecoration.underline,
+                                          ),
                                     ),
                                   ),
                                 ],
@@ -207,12 +201,9 @@ class _MyAppState extends State<MyApp> {
                                 ThemeX.ofType<SwitchComponentTheme>(context)
                                     .borderRadius,
                             color: themeOf(context).surfaceColor,
-                            boxShadow: themeOf(context).darkMode
-                                ? null
-                                : [
-                                    ThemeX.ofType<SwitchComponentTheme>(context)
-                                        .shadow
-                                  ],
+                            boxShadow:
+                                ThemeX.ofType<SwitchComponentTheme>(context)
+                                    .shadow,
                           ),
                           clipBehavior: Clip.hardEdge,
                           child: Row(
@@ -233,9 +224,7 @@ class _MyAppState extends State<MyApp> {
                               ),
                               Text(
                                 'Toggle Dark Mode',
-                                style:
-                                    ThemeX.ofType<SwitchComponentTheme>(context)
-                                        .txSwitch,
+                                style: themeOf(context).txBody,
                               ),
                             ],
                           ),

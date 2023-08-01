@@ -7,8 +7,10 @@ class AccentTheme extends AppTheme {
   );
 
   @override
-  Color get surfaceColor => darkMode ? const Color(0xFF3A7C92) : const Color(0xFF9CDAE7);
+  Color get surfaceColor =>
+      darkMode ? const Color(0xFF3A7C92) : const Color(0xFF9CDAE7);
 
   @override
-  Color get badgeColor => darkMode ? const Color(0xFF2B5970) : const Color(0xFFEFF9FB);
+  Color get badgeColor =>
+      darkMode ? const Color(0xFF2B5970) : const Color(0xFFEFF9FB);
 }

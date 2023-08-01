@@ -10,13 +10,15 @@ class SwitchComponentTheme extends AppTheme {
   Color get surfaceColor =>
       darkMode ? const Color(0xFF0C152C) : const Color(0xFFF7F8F9);
 
-  TextStyle get txSwitch => txBody.copyWith(fontSize: 16);
-
-  BoxShadow get shadow => BoxShadow(
-        color: themeOf(context).shadowColor,
-        blurRadius: 1,
-        offset: const Offset(0, 1),
-      );
+  List<BoxShadow>? get shadow => darkMode
+      ? null
+      : [
+          const BoxShadow(
+            color: Color(0xFF112239),
+            blurRadius: 1,
+            offset: Offset(0, 1),
+          )
+        ];
 
   BorderRadius get borderRadius => BorderRadius.circular(200);
 }

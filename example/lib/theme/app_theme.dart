@@ -13,26 +13,18 @@ class AppTheme extends BaseTheme {
   Color get surfaceColor =>
       darkMode ? const Color(0xFF112239) : const Color(0xFFEFF9FB);
 
-  Color get shadowColor =>
-      darkMode ? const Color(0xFFEFF9FB) : const Color(0xFF112239);
-
-  Color get primaryColor => const Color(0xFF5AC2D7);
-
   Color get badgeColor =>
       darkMode ? const Color(0xFF2B5970) : const Color(0xFFBDE7EF);
 
   Color get highlightTextColor =>
       darkMode ? const Color(0xFFF7F8F9) : const Color(0xFF3A506B);
 
-  Color get linkColor =>
-      darkMode ? const Color(0xFF9CDAE7) : const Color(0xFF3A7C92);
-
   Color get poweredByReveloTextColor => darkMode
       ? const Color(0xFF5AC2D7)
       : const Color.fromARGB(255, 9, 60, 126);
 
   TextStyle get txBody => TextStyle(
-        fontSize: 20,
+        fontSize: 16,
         fontWeight: FontWeight.w400,
         height: 1.5,
         letterSpacing: 1,
@@ -43,10 +35,6 @@ class AppTheme extends BaseTheme {
   TextStyle get txBodyBig => txBody.copyWith(
         fontSize: 38,
         fontWeight: FontWeight.w600,
-      );
-
-  TextStyle get txBodySmall => txBody.copyWith(
-        fontSize: 16,
       );
 
   TextStyle get txBodySmaller => txBody.copyWith(
