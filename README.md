@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/pub/v/themexpert?style=plastic&logo=flutter)](https://pub.dev/packages/themexpert)
 
-![ThemeXpert Logo](https://raw.githubusercontent.com/revelotech/themexpert/main/doc/static/ThemeX_Symbol96.png)
+![ThemeXpert Logo](https://raw.githubusercontent.com/revelotech/themexpert/main/doc/static/ThemeXpert_Symbol96.png)
 
 ThemeXpert is a highly customizable theme solution for Flutter apps, designed to make it easy to apply multiple themes in your app and to change your app's visual identity when needed.
 
