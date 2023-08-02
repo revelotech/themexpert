@@ -1,6 +1,6 @@
 name: themexpert
 description: ThemeXpert is a highly customizable theme solution for Flutter apps, designed to make it easy to apply multiple themes in your app and to change your app's visual identity when needed.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/revelotech/themexpert
 repository: https://github.com/revelotech/themexpert
 issue_tracker: https://github.com/revelotech/themexpert/issues
