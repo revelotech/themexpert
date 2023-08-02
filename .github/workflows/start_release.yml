@@ -29,4 +29,4 @@ jobs:
           USER_EMAIL_GITHUB: ${{ secrets.USER_EMAIL_GITHUB }}
           GITHUB_REPOSITORY: ${{ env.GITHUB_REPOSITORY }}
         run: |
-          bundle exec fastlane start_release_flutter_themex update_type:${{ github.event.inputs.update_type }}
+          bundle exec fastlane start_release_themexpert update_type:${{ github.event.inputs.update_type }}

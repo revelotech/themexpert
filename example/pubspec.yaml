@@ -1,5 +1,5 @@
-name: flutter_themex_example
-description: Demonstrates how to use the flutter_themex plugin.
+name: themexpert_example
+description: Demonstrates how to use the themexpert plugin.
 publish_to: 'none'
 
 environment:
@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_themex:
+  themexpert:
     path: ../
 
 dev_dependencies:

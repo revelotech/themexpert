@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_themex/src/base_theme.dart';
-import 'package:flutter_themex/src/widgets/theme_x_configuration.dart';
+import 'package:themexpert/src/base_theme.dart';
+import 'package:themexpert/src/widgets/theme_x_configuration.dart';
 
 /// [ThemeX] is an inherited widget used to hold the theme info for the
 /// descendants of this tree. Prefer using the [ThemeXWrapper] widget, otherwise

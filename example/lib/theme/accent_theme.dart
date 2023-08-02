@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_themex_example/theme/app_theme.dart';
+import 'package:themexpert_example/theme/app_theme.dart';
 
 class AccentTheme extends AppTheme {
   const AccentTheme(

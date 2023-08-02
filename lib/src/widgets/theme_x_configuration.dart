@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_themex/src/base_theme.dart';
+import 'package:themexpert/src/base_theme.dart';
 
 /// This widget controls if the theme should be dark mode or not. It should only
 /// be used once and be placed before the first occurrence of [ThemeXWrapper].

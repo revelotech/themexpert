@@ -13,18 +13,18 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### start_release_flutter_themex
+### start_release_themexpert
 
 ```sh
-[bundle exec] fastlane start_release_flutter_themex
+[bundle exec] fastlane start_release_themexpert
 ```
 
 Start Release Flutter ThemeX
 
-### finish_release_flutter_themex
+### finish_release_themexpert
 
 ```sh
-[bundle exec] fastlane finish_release_flutter_themex
+[bundle exec] fastlane finish_release_themexpert
 ```
 
 Finish Release Flutter ThemeX

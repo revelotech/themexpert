@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_themex/src/base_theme.dart';
-import 'package:flutter_themex/src/widgets/theme_x.dart';
+import 'package:themexpert/src/base_theme.dart';
+import 'package:themexpert/src/widgets/theme_x.dart';
 
 /// ThemeXWrapper is a convenience widget to build a tree of widgets with the
 /// right [BuildContext] object that is able to fetch the closest theme

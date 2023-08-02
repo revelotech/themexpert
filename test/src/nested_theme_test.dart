@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_themex/flutter_themex.dart';
+import 'package:themexpert/themexpert.dart';
 
 class AppTheme extends BaseTheme {
   AppTheme(super.context);

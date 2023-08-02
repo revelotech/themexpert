@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_themex/flutter_themex.dart';
-import 'package:flutter_themex_example/theme/app_theme.dart';
-import 'package:flutter_themex_example/theme/accent_theme.dart';
-import 'package:flutter_themex_example/theme/switch_component_theme.dart';
+import 'package:themexpert/themexpert.dart';
+import 'package:themexpert_example/theme/app_theme.dart';
+import 'package:themexpert_example/theme/accent_theme.dart';
+import 'package:themexpert_example/theme/switch_component_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
             appBar: AppBar(
               backgroundColor: themeOf(context).surfaceColor,
               title: Text(
-                'Flutter ThemeX Example',
+                'ThemeXpert Example',
                 style: TextStyle(color: themeOf(context).highlightTextColor),
               ),
               systemOverlayStyle: themeOf(context).uiOverlayStyle,

@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:flutter_themex/flutter_themex.dart';
+import 'package:themexpert/themexpert.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme extends BaseTheme {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_themex/flutter_themex.dart';
+import 'package:themexpert/themexpert.dart';
 
 /// This is the base class for every theme in the application. It is expected
 /// that you create your own themes that extend this class. We recommend

@@ -1,14 +1,14 @@
-# Flutter ThemeX
+# ThemeXpert
 
-[![pub package](https://img.shields.io/pub/v/flutter_themex?style=plastic&logo=flutter)](https://pub.dev/packages/flutter_themex)
+[![pub package](https://img.shields.io/pub/v/themexpert?style=plastic&logo=flutter)](https://pub.dev/packages/themexpert)
 
-![Flutter ThemeX Logo](https://raw.githubusercontent.com/revelotech/flutter_themex/main/doc/static/ThemeX_Symbol96.png)
+![ThemeXpert Logo](https://raw.githubusercontent.com/revelotech/themexpert/main/doc/static/ThemeX_Symbol96.png)
 
-Flutter ThemeX is a highly customizable theme solution for Flutter apps, designed to make it easy to apply multiple themes in your app and to change your app's visual identity when needed.
+ThemeXpert is a highly customizable theme solution for Flutter apps, designed to make it easy to apply multiple themes in your app and to change your app's visual identity when needed.
 
-## Why should you use ThemeX?
+## Why should you use ThemeXpert?
 
-<img src="https://raw.githubusercontent.com/revelotech/flutter_themex/main/doc/static/ThemeX_example.gif" width="25%" alt="Working ThemeX gif"/>
+<img src="https://raw.githubusercontent.com/revelotech/themexpert/main/doc/static/ThemeXpert_example.gif" width="25%" alt="Working ThemeXpert gif"/>
 
 - Easily support dark mode in your app.
 - Fetch your main design tokens with ease.
@@ -17,7 +17,7 @@ Flutter ThemeX is a highly customizable theme solution for Flutter apps, designe
 
 ## Usage
 
-1. Add the `flutter_themex` package to your [pubspec dependencies](https://pub.dev/packages/flutter_themex/install).
+1. Add the `themexpert` package to your [pubspec dependencies](https://pub.dev/packages/themexpert/install).
 
 2. Create your own AppTheme class extending from BaseTheme making sure to pass the `context`, and add your theme tokens to your theme class.
 
